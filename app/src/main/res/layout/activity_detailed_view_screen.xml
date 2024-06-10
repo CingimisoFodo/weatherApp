@@ -7,4 +7,114 @@
     android:layout_height="match_parent"
     tools:context=".DetailedViewScreen">
 
+    <TextView
+        android:id="@+id/mondayScreenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <TextView
+        android:id="@+id/tuesdayScreenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tuesday: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103" />
+
+    <TextView
+        android:id="@+id/wednesdayScreenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <TextView
+        android:id="@+id/thursdayScreenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182" />
+
+    <TextView
+        android:id="@+id/fridayScreenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.221" />
+
+    <TextView
+        android:id="@+id/saturdayScreenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saturday: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
+
+    <TextView
+        android:id="@+id/sundayScreenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sunday: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:id="@+id/averageScreenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average Screen Time: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46" />
+
+    <Button
+        android:id="@+id/backToMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/averageScreenTime"
+        android:text="Back to Main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.91" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
