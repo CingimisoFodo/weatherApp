@@ -30,9 +30,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-
-
-        // Repeat for other days
         inputMonday = findViewById(R.id.inputMonday)
         inputTuesday = findViewById(R.id.inputTuesday)
         inputWednesday = findViewById(R.id.inputWednesday)
@@ -54,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 screenTimes[5] = inputSaturday.text.toString().toInt()
                 screenTimes[6] = inputSunday.text.toString().toInt()
 
-                Toast.makeText(this, "Screen times added successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Weather times added successfully", Toast.LENGTH_SHORT).show()
             } catch (e: NumberFormatException) {
                 Toast.makeText(this, "Please enter valid numbers", Toast.LENGTH_SHORT).show()
             }

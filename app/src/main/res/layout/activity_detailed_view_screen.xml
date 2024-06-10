@@ -11,38 +11,39 @@
         android:id="@+id/detailsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detailed View"
+        android:layout_marginTop="92dp"
+        android:text="Detailed Weather"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/screenTimesTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/detailsTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/averageTextView"
-        android:layout_marginTop="20dp"
+        android:layout_width="340dp"
+        android:layout_height="159dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/averageTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailsTextView" />
 
     <TextView
         android:id="@+id/averageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Average Screen Time: "
+        android:layout_marginTop="32dp"
+        android:text="Average Weather: "
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/screenTimesTextView"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/screenTimesTextView" />
 
     <Button
         android:id="@+id/backButton"

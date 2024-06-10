@@ -15,7 +15,7 @@ class DetailedViewScreen : AppCompatActivity() {
         setContentView(R.layout.activity_detailed_view_screen)
 
         val screenTimes = intent.getIntArrayExtra("screenTimes") ?: IntArray(7)
-        val detailsTextView: TextView = findViewById(R.id.screenTimesTextView)
+        val detailsTextView: TextView = findViewById(R.id.detailsTextView)
         val averageTextView: TextView = findViewById(R.id.averageTextView)
         val backButton: Button = findViewById(R.id.backButton)
 
@@ -24,13 +24,13 @@ class DetailedViewScreen : AppCompatActivity() {
         var total = 0
 
         for (i in screenTimes.indices) {
-            detailsText.append("${days[i]}: ${screenTimes[i]} hours\n")
+            detailsText.append("${days[i]}: ${screenTimes[i]} Degrees Celcius\n")
             total += screenTimes[i]
         }
 
         val average = total / 7.0
         detailsTextView.text = detailsText.toString()
-        averageTextView.text = "Average Screen Time: $average hours"
+        averageTextView.text = "Average Weather : $average Degrees Celcius"
 
         backButton.setOnClickListener {
             finish()
