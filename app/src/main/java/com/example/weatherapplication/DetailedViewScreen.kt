@@ -14,46 +14,30 @@ class DetailedViewScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_detailed_view_screen)
 
-        
+        val screenTimes = intent.getIntArrayExtra("screenTimes") ?: IntArray(7)
+        val detailsTextView: TextView = findViewById(R.id.screenTimesTextView)
+        val averageTextView: TextView = findViewById(R.id.averageTextView)
+        val backButton: Button = findViewById(R.id.backButton)
 
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            enableEdgeToEdge()
-            setContentView(R.layout.activity_detailed_view_screen)
+        val detailsText = StringBuilder()
+        val days = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+        var total = 0
 
+        for (i in screenTimes.indices) {
+            detailsText.append("${days[i]}: ${screenTimes[i]} hours\n")
+            total += screenTimes[i]
+        }
 
-           val mondayScreenTime: TextView = findViewById(R.id.mondayScreenTime)
-            val  tuesdayScreenTime: TextView = findViewById(R.id.tuesdayScreenTime)
-            val wednesdayScreenTime: TextView = findViewById(R.id.wednesdayScreenTime)
-            val   thursdayScreenTime: TextView = findViewById(R.id.thursdayScreenTime)
-            val fridayScreenTime: TextView = findViewById(R.id.fridayScreenTime)
-            val  saturdayScreenTime: TextView = findViewById(R.id.saturdayScreenTime)
-            val  sundayScreenTime : TextView = findViewById(R.id.sundayScreenTime)
-            val  averageScreenTime : TextView = findViewById(R.id.averageScreenTime)
-            val backToMainButton: Button = findViewById(R.id.backToMainButton)
+        val average = total / 7.0
+        detailsTextView.text = detailsText.toString()
+        averageTextView.text = "Average Screen Time: $average hours"
 
-            val screenTimes = intent.getIntegerArrayListExtra("screenTimes")
-            if (screenTimes != null) {
-                mondayScreenTime.text = "Monday: ${screenTimes[0]} hours"
-                tuesdayScreenTime.text = "Tuesday: ${screenTimes[0]} hours"
-                wednesdayScreenTime.text = "Wednesday: ${screenTimes[0]} hours"
-                thursdayScreenTime.text = "Thursday: ${screenTimes[0]} hours"
-                fridayScreenTime.text = "Friday: ${screenTimes[0]} hours"
-                saturdayScreenTime.text = "Saturday: ${screenTimes[0]} hours"
-                sundayScreenTime.text = "Sunday: ${screenTimes[0]} hours"
-
-
-                val average = screenTimes.sum() / screenTimes.size.toDouble()
-                averageScreenTime.text = "Average Screen Time: $average hours"
-            }
-
-
-            backToMainButton.setOnClickListener {
-                finish()
-            }
+        backButton.setOnClickListener {
+            finish()
         }
     }
 }
+
 
 
 
