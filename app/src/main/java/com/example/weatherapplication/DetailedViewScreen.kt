@@ -26,17 +26,17 @@ class DetailedViewScreen : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             enableEdgeToEdge()
-            setContentView(R.layout.activity_detailed_view_screen2)
+            setContentView(R.layout.activity_detailed_view_screen)
 
 
-            mondayScreenTime  = findViewById(R.id.mondayScreenTime)
-            tuesdayScreenTime = findViewById(R.id.tuesdayScreenTime)
-            wednesdayScreenTime = findViewById(R.id.wednesdayScreenTime)
-            thursdayScreenTime = findViewById(R.id.thursdayScreenTime)
-            fridayScreenTime = findViewById(R.id.fridayScreenTime)
-            saturdayScreenTime = findViewById(R.id.saturdayScreenTime)
-            sundayScreenTime = findViewById(R.id.sundayScreenTime)
-            averageScreenTime = findViewById(R.id.averageScreenTime)
+           val mondayScreenTime: TextView = findViewById(R.id.mondayScreenTime)
+            val  tuesdayScreenTime: TextView = findViewById(R.id.tuesdayScreenTime)
+            val wednesdayScreenTime: TextView = findViewById(R.id.wednesdayScreenTime)
+            val   thursdayScreenTime: TextView = findViewById(R.id.thursdayScreenTime)
+            val fridayScreenTime: TextView = findViewById(R.id.fridayScreenTime)
+            val  saturdayScreenTime: TextView = findViewById(R.id.saturdayScreenTime)
+            val  sundayScreenTime = findViewById(R.id.sundayScreenTime)
+            val  averageScreenTime = findViewById(R.id.averageScreenTime)
             val backToMainButton: Button = findViewById(R.id.backToMainButton)
 
             val screenTimes = intent.getIntegerArrayListExtra("screenTimes")
@@ -50,8 +50,6 @@ class DetailedViewScreen : AppCompatActivity() {
                 sundayScreenTime.text = "Sunday: ${screenTimes[0]} hours"
 
 
-
-
                 val average = screenTimes.sum() / screenTimes.size.toDouble()
                 averageScreenTime.text = "Average Screen Time: $average hours"
             }
@@ -62,7 +60,8 @@ class DetailedViewScreen : AppCompatActivity() {
             }
         }
     }
-
-
 }
-    }
+
+
+
+
