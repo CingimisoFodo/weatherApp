@@ -67,3 +67,4 @@ The Screen Smart Weather App offers a powerful tool for monitoring and analysing
 
 
 ## A link to Github repository
+https://github.com/CingimisoFodo/weatherApp/tree/main
