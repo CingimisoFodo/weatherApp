@@ -12,69 +12,75 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var inputMonday: EditText
-    private lateinit var inputTuesday: EditText
-    private lateinit var inputWednesday: EditText
-    private lateinit var inputThursday: EditText
-    private lateinit var inputFriday: EditText
-    private lateinit var inputSaturday: EditText
-    private lateinit var inputSunday: EditText
-    private lateinit var addDataButton: Button
-    private lateinit var clearDataButton: Button
-    private lateinit var viewDetailsButton: Button
-
-    private val screenTimes = IntArray(7)
+    private lateinit var inputMonday: EditText// (IIE,2024)
+    private lateinit var inputTuesday: EditText// (IIE,2024)
+    private lateinit var inputWednesday: EditText// (IIE,2024)
+    private lateinit var inputThursday: EditText// (IIE,2024)
+    private lateinit var inputFriday: EditText// (IIE,2024)
+    private lateinit var inputSaturday: EditText// (IIE,2024)
+    private lateinit var inputSunday: EditText// (IIE,2024)
+    private lateinit var addDataButton: Button// (IIE,2024)
+    private lateinit var clearDataButton: Button// (IIE,2024)
+    private lateinit var viewDetailsButton: Button// (IIE,2024)
+    //(Kotlin Help, 2024)
+    private val screenTimes = IntArray(7)// (IIE,2024)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-
-        inputMonday = findViewById(R.id.inputMonday)
-        inputTuesday = findViewById(R.id.inputTuesday)
-        inputWednesday = findViewById(R.id.inputWednesday)
-        inputThursday = findViewById(R.id.inputThursday)
-        inputFriday = findViewById(R.id.inputFriday)
-        inputSaturday = findViewById(R.id.inputSaturday)
-        inputSunday= findViewById(R.id.inputSunday)
-        addDataButton = findViewById(R.id.addDataButton)
-        clearDataButton = findViewById(R.id.clearDataButton)
-        viewDetailsButton = findViewById(R.id.viewDetailsButton)
-
+        //(Kotlin Help, 2024)
+        inputMonday = findViewById(R.id.inputMonday)// (IIE,2024)
+        inputTuesday = findViewById(R.id.inputTuesday)// (IIE,2024)
+        inputWednesday = findViewById(R.id.inputWednesday)// (IIE,2024)
+        inputThursday = findViewById(R.id.inputThursday)// (IIE,2024)
+        inputFriday = findViewById(R.id.inputFriday)// (IIE,2024)
+        inputSaturday = findViewById(R.id.inputSaturday)// (IIE,2024)
+        inputSunday= findViewById(R.id.inputSunday)// (IIE,2024)
+        addDataButton = findViewById(R.id.addDataButton)// (IIE,2024)
+        clearDataButton = findViewById(R.id.clearDataButton)// (IIE,2024)
+        viewDetailsButton = findViewById(R.id.viewDetailsButton)// (IIE,2024)
+        //(Kotlin Help, 2024)
         addDataButton.setOnClickListener {
             try {
-                screenTimes[0] = inputMonday.text.toString().toInt()
-                screenTimes[1] = inputTuesday.text.toString().toInt()
-                screenTimes[2] = inputWednesday.text.toString().toInt()
-                screenTimes[3] = inputThursday.text.toString().toInt()
-                screenTimes[4] = inputFriday.text.toString().toInt()
-                screenTimes[5] = inputSaturday.text.toString().toInt()
-                screenTimes[6] = inputSunday.text.toString().toInt()
+                screenTimes[0] = inputMonday.text.toString().toInt()// (IIE,2024)
+                screenTimes[1] = inputTuesday.text.toString().toInt()// (IIE,2024)
+                screenTimes[2] = inputWednesday.text.toString().toInt()// (IIE,2024)
+                screenTimes[3] = inputThursday.text.toString().toInt()// (IIE,2024)
+                screenTimes[4] = inputFriday.text.toString().toInt()// (IIE,2024)
+                screenTimes[5] = inputSaturday.text.toString().toInt()// (IIE,2024)
+                screenTimes[6] = inputSunday.text.toString().toInt()// (IIE,2024)
 
-                Toast.makeText(this, "Weather times added successfully", Toast.LENGTH_SHORT).show()
-            } catch (e: NumberFormatException) {
-                Toast.makeText(this, "Please enter valid numbers", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Temperature times added successfully", Toast.LENGTH_SHORT).show()// (IIE,2024)
+            } catch (e: NumberFormatException) {// (IIE,2024)
+                Toast.makeText(this, "Please enter valid temperature numbers", Toast.LENGTH_SHORT).show()// (IIE,2024)
             }
         }
 
-        clearDataButton.setOnClickListener {
-            inputMonday.text.clear()
-            inputTuesday.text.clear()
-            inputWednesday.text.clear()
-            inputThursday.text.clear()
-            inputFriday.text.clear()
-            inputSaturday.text.clear()
-            inputSunday.text.clear()
+        clearDataButton.setOnClickListener {// (IIE,2024)
+            inputMonday.text.clear()// (IIE,2024)
+            inputTuesday.text.clear()// (IIE,2024)
+            inputWednesday.text.clear()// (IIE,2024)
+            inputThursday.text.clear()// (IIE,2024)
+            inputFriday.text.clear()// (IIE,2024)
+            inputSaturday.text.clear()// (IIE,2024)
+            inputSunday.text.clear()// (IIE,2024)
         }
 
-        viewDetailsButton.setOnClickListener {
-            val intent = Intent(this, DetailedViewScreen::class.java)
-            intent.putExtra("screenTimes", screenTimes)
-            startActivity(intent)
+        viewDetailsButton.setOnClickListener {// (IIE,2024)
+            val intent = Intent(this, DetailedViewScreen::class.java)// (IIE,2024)
+            intent.putExtra("screenTimes", screenTimes)// (IIE,2024)
+            startActivity(intent)// (IIE,2024)
         }
     }
 }
+// REFERENCE LIST
 
+// The IIE, 2024. Introduction to Mobile Application Development [IMAD5112/d/p/w]. The Independent Institution of Education: Unpublished [Accessed 3 may 2024].
+// Pixabay (2024). Pixabay. [online] Pixabay.com. Available at: https://pixabay.com/.
+// iStockPhoto.com. (2024). Stockfoto’s, royalty free beelden en video’s - iStock. [online] Available at: https://www.istockphoto.com/nl [Accessed 6 May 2024].
+// Kotlin Help. (2024). Get started with Kotlin | Kotlin. [online] Available at: https://kotlinlang.org/docs/getting-started.html [Accessed 3 Jun. 2024].
+// GitHub (2024). GitHub. [online] GitHub. Available at: https://github.com/.
 
 
 

@@ -14,29 +14,36 @@ class DetailedViewScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_detailed_view_screen)
 
-        val screenTimes = intent.getIntArrayExtra("screenTimes") ?: IntArray(7)
-        val detailsTextView: TextView = findViewById(R.id.detailsTextView)
-        val averageTextView: TextView = findViewById(R.id.averageTextView)
-        val backButton: Button = findViewById(R.id.backButton)
+        val screenTimes = intent.getIntArrayExtra("screenTimes") ?: IntArray(7)// (IIE,2024)
+        val detailsTextView: TextView = findViewById(R.id.detailsTextView)// (IIE,2024)
+        val averageTextView: TextView = findViewById(R.id.averageTextView)// (IIE,2024)
+        val backButton: Button = findViewById(R.id.backButton)// (IIE,2024)
 
-        val detailsText = StringBuilder()
+        val detailsText = StringBuilder()// (IIE,2024)
         val days = arrayOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-        var total = 0
+        var total = 0// (IIE,2024)
 
         for (i in screenTimes.indices) {
-            detailsText.append("${days[i]}: ${screenTimes[i]} Degrees Celcius\n")
-            total += screenTimes[i]
+            detailsText.append("${days[i]}: ${screenTimes[i]} Temperature\n")// (IIE,2024)
+            total += screenTimes[i]// (IIE,2024)
         }
 
-        val average = total / 7.0
-        detailsTextView.text = detailsText.toString()
-        averageTextView.text = "Average Weather : $average Degrees Celcius"
+        val average = total / 7.0// (IIE,2024)
+        detailsTextView.text = detailsText.toString()// (IIE,2024)
+        averageTextView.text = "Average Weather : $average Temperature"// (IIE,2024)
 
         backButton.setOnClickListener {
-            finish()
+            finish()// (IIE,2024)
         }
     }
 }
+// REFERENCE LIST
+
+// The IIE, 2024. Introduction to Mobile Application Development [IMAD5112/d/p/w]. The Independent Institution of Education: Unpublished [Accessed 3 may 2024].
+// Pixabay (2024). Pixabay. [online] Pixabay.com. Available at: https://pixabay.com/.
+// iStockPhoto.com. (2024). Stockfoto’s, royalty free beelden en video’s - iStock. [online] Available at: https://www.istockphoto.com/nl [Accessed 6 May 2024].
+// Kotlin Help. (2024). Get started with Kotlin | Kotlin. [online] Available at: https://kotlinlang.org/docs/getting-started.html [Accessed 3 Jun. 2024].
+// GitHub (2024). GitHub. [online] GitHub. Available at: https://github.com/.
 
 
 
